@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Experiment</title>
+
+  <script src="https://unpkg.com/jspsych@7.3.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.2"></script>
+</head>
+
+<body></body>
+
+<script>
+
+// 🧠 Deine 4 Entscheidungsprobleme (Wahrscheinlichkeiten bleiben intern!)
+const trials = [
+  {prob: 0.1, high: 16.5, low: 6.9},
+  {prob: 0.2, high: 16.5, low: 6.9},
+  {prob: 0.3, high: 16.5, low: 6.9},
+  {prob: 0.4, high: 16.5, low: 6.9}
+];
+
+// 🎲 Zufallsziehung
+function drawSample(prob, high, low) {
+  return Math.random() < prob ? high : low;
+}
+
+// 🚀 jsPsych starten
+const jsPsych = initJsPsych({
+  on_finish: function() {
+    jsPsych.data.get().localSave('csv','daten.csv');
+  }
+});
+
+// 🧱 Timeline
+let timeline = [];
+
+// 🔁 Für jedes Item
+trials.forEach((trial, index) => {
+
+  let historyA = [];
+  let historyB = [];
+  let drawsLeft = 20;
+  let startTime;
+
+  // 🔹 Sampling
+  const sampling = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: function() {
+      return `
+        <p><b>Aufgabe ${index + 1}</b></p>
+        <p>Verbleibende Ziehungen: ${drawsLeft}</p>
+
+        <p><b>Option A</b></p>
+        <p>${historyA.join(", ") || "-"}</p>
+
+        <p><b>Option B</b></p>
+        <p>${historyB.join(", ") || "-"}</p>
+      `;
+    },
+    choices: ["Sample A", "Sample B", "Entscheiden"],
+    on_finish: function(data) {
+
+      if (data.response == 2) {
+        data.stop = true;
+        return;
+      }
+
+      let result;
+
+      if (data.response == 0) {
+        result = 7;
+        historyA.push(result);
+        data.sample = "A";
+      } else {
+        result = drawSample(trial.prob, trial.high, trial.low);
+        historyB.push(result);
+        data.sample = "B";
+      }
+
+      data.result = result;
+      data.trial_number = index + 1;
+
+      drawsLeft--;
+    }
+  };
+
+  // 🔁 Loop
+  const loop = {
+    timeline: [sampling],
+    loop_function: function(data) {
+      let last = data.values()[0];
+      if (last.stop) return false;
+      return drawsLeft > 0;
+    }
+  };
+
+  // 🧠 Entscheidung (JETZT MINIMALISTISCH)
+  const decision = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <p><b>Bitte wählen Sie zwischen Option A und Option B:</b></p>
+    `,
+    choices: ["Option A", "Option B"],
+    on_start: function() {
+      startTime = performance.now();
+    },
+    on_finish: function(data) {
+      let end = performance.now();
+
+      data.choice = data.response == 0 ? "A" : "B";
+      data.decision_time = Math.round(end - startTime);
+      data.samplesA = historyA.length;
+      data.samplesB = historyB.length;
+      data.trial_number = index + 1;
+      data.probability = trial.prob; // nur für dich, nicht sichtbar!
+    }
+  };
+
+  timeline.push(loop);
+  timeline.push(decision);
+
+});
+
+// ▶️ Start
+jsPsych.run(timeline);
+
+</script>
+</html>
