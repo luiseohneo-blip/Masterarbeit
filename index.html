@@ -38,10 +38,6 @@
             width: 0%;
             transition: width 0.3s;
         }
-        .nav-buttons {
-            margin-top: 30px;
-            text-align: center;
-        }
         button {
             margin: 5px;
             padding: 10px 20px;
@@ -113,6 +109,10 @@
             margin-bottom: 20px;
             color: #666;
         }
+        .experiment-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -122,314 +122,284 @@
 </div>
 <div class="trial-counter" id="trial-counter">Teil 1 von 14</div>
 
-<!-- Seite 1: Sampling Experiment 1 (p=0.01, 7€ sicher) -->
+<!-- Alle 14 Experiment-Seiten -->
 <div class="page" id="page1">
     <h3>Teil 1/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling1">
-        <p>Verbleibende Ziehungen: <span id="draws-left1">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a1">Sample A (7€ sicher)</button>
-            <button id="sample-b1">Sample B (unsicher)</button>
-            <button id="decide1">Entscheiden</button>
+    <div id="exp1-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp1-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp1-sample-a">Sample A (7€ sicher)</button>
+            <button class="exp1-sample-b">Sample B (unsicher)</button>
+            <button class="exp1-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision1" class="hidden">
+    <div id="exp1-decision" class="hidden">
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice1" value="A"> Option A (7€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice1" value="B"> Option B (16.50€ / 6.90€)</label>
+            <label><input type="radio" name="exp1-choice" value="A"> Option A (7€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp1-choice" value="B"> Option B (16.50€ / 6.90€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit1">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp1-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 2: Sampling Experiment 2 (p=0.01, 8€ sicher) -->
 <div class="page" id="page2">
     <h3>Teil 2/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling2">
-        <p>Verbleibende Ziehungen: <span id="draws-left2">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a2">Sample A (8€ sicher)</button>
-            <button id="sample-b2">Sample B (unsicher)</button>
-            <button id="decide2">Entscheiden</button>
+    <div id="exp2-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp2-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp2-sample-a">Sample A (8€ sicher)</button>
+            <button class="exp2-sample-b">Sample B (unsicher)</button>
+            <button class="exp2-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision2" class="hidden">
+    <div id="exp2-decision" class="hidden">
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice2" value="A"> Option A (8€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice2" value="B"> Option B (16.50€ / 6.90€)</label>
+            <label><input type="radio" name="exp2-choice" value="A"> Option A (8€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp2-choice" value="B"> Option B (16.50€ / 6.90€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit2">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp2-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 3: Sampling Experiment 3 (p=0.01, 9€ sicher) -->
 <div class="page" id="page3">
     <h3>Teil 3/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling3">
-        <p>Verbleibende Ziehungen: <span id="draws-left3">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a3">Sample A (9€ sicher)</button>
-            <button id="sample-b3">Sample B (unsicher)</button>
-            <button id="decide3">Entscheiden</button>
+    <div id="exp3-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp3-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp3-sample-a">Sample A (9€ sicher)</button>
+            <button class="exp3-sample-b">Sample B (unsicher)</button>
+            <button class="exp3-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision3" class="hidden">
+    <div id="exp3-decision" class="hidden">
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice3" value="A"> Option A (9€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice3" value="B"> Option B (16.50€ / 6.90€)</label>
+            <label><input type="radio" name="exp3-choice" value="A"> Option A (9€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp3-choice" value="B"> Option B (16.50€ / 6.90€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit3">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp3-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 4: Sampling Experiment 4 (p=0.01, 10€ sicher) -->
 <div class="page" id="page4">
     <h3>Teil 4/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling4">
-        <p>Verbleibende Ziehungen: <span id="draws-left4">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a4">Sample A (10€ sicher)</button>
-            <button id="sample-b4">Sample B (unsicher)</button>
-            <button id="decide4">Entscheiden</button>
+    <div id="exp4-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp4-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp4-sample-a">Sample A (10€ sicher)</button>
+            <button class="exp4-sample-b">Sample B (unsicher)</button>
+            <button class="exp4-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision4" class="hidden">
+    <div id="exp4-decision" class="hidden">
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice4" value="A"> Option A (10€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice4" value="B"> Option B (16.50€ / 6.90€)</label>
+            <label><input type="radio" name="exp4-choice" value="A"> Option A (10€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp4-choice" value="B"> Option B (16.50€ / 6.90€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit4">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp4-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 5: Kosten Experiment 1 (0.50€ Kosten) -->
 <div class="page" id="page5">
     <h3>Teil 5/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling5">
-        <div class="cost-notice">
-            <strong>Hinweis:</strong> Für jede Wahl von Option B entstehen Kosten von 0,50 Euro.
-        </div>
-        <p>Verbleibende Ziehungen: <span id="draws-left5">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a5">Sample A (7€ sicher)</button>
-            <button id="sample-b5">Sample B (unsicher + 0.50€ Kosten)</button>
-            <button id="decide5">Entscheiden</button>
+    <div id="exp5-sampling">
+        <div class="cost-notice">Hinweis: Für jede Wahl von Option B entstehen Kosten von 0,50 Euro.</div>
+        <p>Verbleibende Ziehungen: <span id="exp5-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp5-sample-a">Sample A (7€ sicher)</button>
+            <button class="exp5-sample-b">Sample B (unsicher + 0.50€ Kosten)</button>
+            <button class="exp5-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision5" class="hidden">
-        <div class="cost-notice">
-            <strong>Hinweis:</strong> Für die Wahl von Option B entstehen Kosten von 0,50 Euro.
-        </div>
+    <div id="exp5-decision" class="hidden">
+        <div class="cost-notice">Hinweis: Für die Wahl von Option B entstehen Kosten von 0,50 Euro.</div>
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice5" value="A"> Option A (7€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice5" value="B"> Option B (16.50€ / 6.90€ mit 0.50€ Kosten)</label>
+            <label><input type="radio" name="exp5-choice" value="A"> Option A (7€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp5-choice" value="B"> Option B (16.50€ / 6.90€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit5">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp5-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 6: Kosten Experiment 2 (1.00€ Kosten) -->
 <div class="page" id="page6">
     <h3>Teil 6/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling6">
-        <div class="cost-notice">
-            <strong>Hinweis:</strong> Für jede Wahl von Option B entstehen Kosten von 1,00 Euro.
-        </div>
-        <p>Verbleibende Ziehungen: <span id="draws-left6">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a6">Sample A (7€ sicher)</button>
-            <button id="sample-b6">Sample B (unsicher + 1.00€ Kosten)</button>
-            <button id="decide6">Entscheiden</button>
+    <div id="exp6-sampling">
+        <div class="cost-notice">Hinweis: Für jede Wahl von Option B entstehen Kosten von 1,00 Euro.</div>
+        <p>Verbleibende Ziehungen: <span id="exp6-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp6-sample-a">Sample A (7€ sicher)</button>
+            <button class="exp6-sample-b">Sample B (unsicher + 1.00€ Kosten)</button>
+            <button class="exp6-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision6" class="hidden">
-        <div class="cost-notice">
-            <strong>Hinweis:</strong> Für die Wahl von Option B entstehen Kosten von 1,00 Euro.
-        </div>
+    <div id="exp6-decision" class="hidden">
+        <div class="cost-notice">Hinweis: Für die Wahl von Option B entstehen Kosten von 1,00 Euro.</div>
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice6" value="A"> Option A (7€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice6" value="B"> Option B (16.50€ / 6.90€ mit 1.00€ Kosten)</label>
+            <label><input type="radio" name="exp6-choice" value="A"> Option A (7€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp6-choice" value="B"> Option B (16.50€ / 6.90€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit6">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp6-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 7: Kosten Experiment 3 (2.00€ Kosten) -->
 <div class="page" id="page7">
     <h3>Teil 7/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling7">
-        <div class="cost-notice">
-            <strong>Hinweis:</strong> Für jede Wahl von Option B entstehen Kosten von 2,00 Euro.
-        </div>
-        <p>Verbleibende Ziehungen: <span id="draws-left7">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a7">Sample A (7€ sicher)</button>
-            <button id="sample-b7">Sample B (unsicher + 2.00€ Kosten)</button>
-            <button id="decide7">Entscheiden</button>
+    <div id="exp7-sampling">
+        <div class="cost-notice">Hinweis: Für jede Wahl von Option B entstehen Kosten von 2,00 Euro.</div>
+        <p>Verbleibende Ziehungen: <span id="exp7-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp7-sample-a">Sample A (7€ sicher)</button>
+            <button class="exp7-sample-b">Sample B (unsicher + 2.00€ Kosten)</button>
+            <button class="exp7-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision7" class="hidden">
-        <div class="cost-notice">
-            <strong>Hinweis:</strong> Für die Wahl von Option B entstehen Kosten von 2,00 Euro.
-        </div>
+    <div id="exp7-decision" class="hidden">
+        <div class="cost-notice">Hinweis: Für die Wahl von Option B entstehen Kosten von 2,00 Euro.</div>
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice7" value="A"> Option A (7€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice7" value="B"> Option B (16.50€ / 6.90€ mit 2.00€ Kosten)</label>
+            <label><input type="radio" name="exp7-choice" value="A"> Option A (7€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp7-choice" value="B"> Option B (16.50€ / 6.90€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit7">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp7-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 8: Kosten Experiment 4 (3.00€ Kosten) -->
 <div class="page" id="page8">
     <h3>Teil 8/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling8">
-        <div class="cost-notice">
-            <strong>Hinweis:</strong> Für jede Wahl von Option B entstehen Kosten von 3,00 Euro.
-        </div>
-        <p>Verbleibende Ziehungen: <span id="draws-left8">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a8">Sample A (7€ sicher)</button>
-            <button id="sample-b8">Sample B (unsicher + 3.00€ Kosten)</button>
-            <button id="decide8">Entscheiden</button>
+    <div id="exp8-sampling">
+        <div class="cost-notice">Hinweis: Für jede Wahl von Option B entstehen Kosten von 3,00 Euro.</div>
+        <p>Verbleibende Ziehungen: <span id="exp8-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp8-sample-a">Sample A (7€ sicher)</button>
+            <button class="exp8-sample-b">Sample B (unsicher + 3.00€ Kosten)</button>
+            <button class="exp8-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision8" class="hidden">
-        <div class="cost-notice">
-            <strong>Hinweis:</strong> Für die Wahl von Option B entstehen Kosten von 3,00 Euro.
-        </div>
+    <div id="exp8-decision" class="hidden">
+        <div class="cost-notice">Hinweis: Für die Wahl von Option B entstehen Kosten von 3,00 Euro.</div>
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice8" value="A"> Option A (7€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice8" value="B"> Option B (16.50€ / 6.90€ mit 3.00€ Kosten)</label>
+            <label><input type="radio" name="exp8-choice" value="A"> Option A (7€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp8-choice" value="B"> Option B (16.50€ / 6.90€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit8">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp8-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 9: Wahrscheinlichkeit 0.10 -->
 <div class="page" id="page9">
-    <h3>Teil 9/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling9">
-        <p>Verbleibende Ziehungen: <span id="draws-left9">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a9">Sample A (7€ sicher)</button>
-            <button id="sample-b9">Sample B (10% Chance auf 16.50€)</button>
-            <button id="decide9">Entscheiden</button>
+    <h3>Teil 9/14: Bitte wählen Sie zwischen A und B (10% Chance).</h3>
+    <div id="exp9-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp9-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp9-sample-a">Sample A (7€ sicher)</button>
+            <button class="exp9-sample-b">Sample B (10% Chance auf 16.50€)</button>
+            <button class="exp9-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision9" class="hidden">
+    <div id="exp9-decision" class="hidden">
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice9" value="A"> Option A (7€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice9" value="B"> Option B (10% Chance auf 16.50€, sonst 6.90€)</label>
+            <label><input type="radio" name="exp9-choice" value="A"> Option A (7€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp9-choice" value="B"> Option B (10% Chance auf 16.50€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit9">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp9-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 10: Wahrscheinlichkeit 0.20 -->
 <div class="page" id="page10">
-    <h3>Teil 10/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling10">
-        <p>Verbleibende Ziehungen: <span id="draws-left10">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a10">Sample A (7€ sicher)</button>
-            <button id="sample-b10">Sample B (20% Chance auf 16.50€)</button>
-            <button id="decide10">Entscheiden</button>
+    <h3>Teil 10/14: Bitte wählen Sie zwischen A und B (20% Chance).</h3>
+    <div id="exp10-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp10-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp10-sample-a">Sample A (7€ sicher)</button>
+            <button class="exp10-sample-b">Sample B (20% Chance auf 16.50€)</button>
+            <button class="exp10-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision10" class="hidden">
+    <div id="exp10-decision" class="hidden">
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice10" value="A"> Option A (7€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice10" value="B"> Option B (20% Chance auf 16.50€, sonst 6.90€)</label>
+            <label><input type="radio" name="exp10-choice" value="A"> Option A (7€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp10-choice" value="B"> Option B (20% Chance auf 16.50€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit10">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp10-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 11: Wahrscheinlichkeit 0.30 -->
 <div class="page" id="page11">
-    <h3>Teil 11/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling11">
-        <p>Verbleibende Ziehungen: <span id="draws-left11">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a11">Sample A (7€ sicher)</button>
-            <button id="sample-b11">Sample B (30% Chance auf 16.50€)</button>
-            <button id="decide11">Entscheiden</button>
+    <h3>Teil 11/14: Bitte wählen Sie zwischen A und B (30% Chance).</h3>
+    <div id="exp11-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp11-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp11-sample-a">Sample A (7€ sicher)</button>
+            <button class="exp11-sample-b">Sample B (30% Chance auf 16.50€)</button>
+            <button class="exp11-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision11" class="hidden">
+    <div id="exp11-decision" class="hidden">
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice11" value="A"> Option A (7€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice11" value="B"> Option B (30% Chance auf 16.50€, sonst 6.90€)</label>
+            <label><input type="radio" name="exp11-choice" value="A"> Option A (7€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp11-choice" value="B"> Option B (30% Chance auf 16.50€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit11">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp11-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 12: Wahrscheinlichkeit 0.40 -->
 <div class="page" id="page12">
-    <h3>Teil 12/14: Bitte wählen Sie zwischen A und B.</h3>
-    <div id="sampling12">
-        <p>Verbleibende Ziehungen: <span id="draws-left12">20</span></p>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="sample-a12">Sample A (7€ sicher)</button>
-            <button id="sample-b12">Sample B (40% Chance auf 16.50€)</button>
-            <button id="decide12">Entscheiden</button>
+    <h3>Teil 12/14: Bitte wählen Sie zwischen A und B (40% Chance).</h3>
+    <div id="exp12-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp12-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp12-sample-a">Sample A (7€ sicher)</button>
+            <button class="exp12-sample-b">Sample B (40% Chance auf 16.50€)</button>
+            <button class="exp12-decide">Entscheiden</button>
         </div>
     </div>
-    <div id="decision12" class="hidden">
+    <div id="exp12-decision" class="hidden">
         <p>Ihre Wahl:</p>
         <div>
-            <label><input type="radio" name="choice12" value="A"> Option A (7€ sicher)</label>
-            <label style="margin-left: 20px;"><input type="radio" name="choice12" value="B"> Option B (40% Chance auf 16.50€, sonst 6.90€)</label>
+            <label><input type="radio" name="exp12-choice" value="A"> Option A (7€ sicher)</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp12-choice" value="B"> Option B (40% Chance auf 16.50€)</label>
         </div>
-        <div style="margin-top: 20px;">
-            <button id="submit12">Bestätigen</button>
+        <div class="experiment-buttons">
+            <button class="exp12-submit">Bestätigen</button>
         </div>
     </div>
 </div>
 
-<!-- Seite 13: Zeitpräferenz 1 Monat vs heute -->
 <div class="page" id="page13">
+    <h3>Teil 13/14: Zeitpräferenz</h3>
     <div style="max-width: 550px; margin: 0 auto;">
-        <h3>Teil 13/14: Bitte wählen Sie zwischen A und B.</h3>
         <table class="delay-table">
-            <thead>
-                <tr><th>Option A<br>Auszahlung heute</th><th></th><th>Option B<br>Auszahlung in 1 Monat</th></tr>
-            </thead>
+            <thead><tr><th>Option A<br>Auszahlung heute</th><th></th><th>Option B<br>Auszahlung in 1 Monat</th></tr></thead>
             <tbody>
                 <tr><td><input type="radio" name="delay1_1" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_1" value="B10.50"> 10,50 €</td></tr>
                 <tr><td><input type="radio" name="delay1_2" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_2" value="B11.00"> 11,00 €</td></tr>
@@ -443,20 +413,15 @@
                 <tr><td><input type="radio" name="delay1_10" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_10" value="B15.00"> 15,00 €</td></tr>
             </tbody>
         </table>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="submit13">Weiter zu Teil 14</button>
-        </div>
+        <div class="experiment-buttons"><button id="submit13">Weiter</button></div>
     </div>
 </div>
 
-<!-- Seite 14: Zeitpräferenz 2 Monate vs 1 Monat -->
 <div class="page" id="page14">
+    <h3>Teil 14/14: Zeitpräferenz</h3>
     <div style="max-width: 550px; margin: 0 auto;">
-        <h3>Teil 14/14: Bitte wählen Sie zwischen A und B.</h3>
         <table class="delay-table">
-            <thead>
-                <tr><th>Option A<br>Auszahlung in 1 Monat</th><th></th><th>Option B<br>Auszahlung in 2 Monaten</th></tr>
-            </thead>
+            <thead><tr><th>Option A<br>Auszahlung in 1 Monat</th><th></th><th>Option B<br>Auszahlung in 2 Monaten</th></tr></thead>
             <tbody>
                 <tr><td><input type="radio" name="delay2_1" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_1" value="B10.50"> 10,50 €</td></tr>
                 <tr><td><input type="radio" name="delay2_2" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_2" value="B11.00"> 11,00 €</td></tr>
@@ -470,13 +435,10 @@
                 <tr><td><input type="radio" name="delay2_10" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_10" value="B15.00"> 15,00 €</td></tr>
             </tbody>
         </table>
-        <div style="margin-top: 20px; text-align: center;">
-            <button id="submit14">Experiment abschließen</button>
-        </div>
+        <div class="experiment-buttons"><button id="submit14">Abschließen</button></div>
     </div>
 </div>
 
-<!-- Dankesseite am Ende -->
 <div class="page" id="thankyou">
     <h2>Vielen Dank für Ihre Teilnahme!</h2>
     <p>Ihre Daten wurden erfolgreich gespeichert.</p>
@@ -487,10 +449,11 @@
 <div id="message" class="message"></div>
 
 <script>
-// ==================== DATENSPEICHERUNG ====================
+// Globale Variablen
 let allResults = [];
+let currentPage = 1;
+const totalPages = 15;
 
-// Globale Funktionen
 function showMessage(text) {
     const msg = document.getElementById('message');
     const overlay = document.getElementById('overlay');
@@ -499,10 +462,6 @@ function showMessage(text) {
     overlay.style.display = 'block';
     setTimeout(() => { msg.style.display = 'none'; overlay.style.display = 'none'; }, 800);
 }
-
-// ==================== SEITEN-NAVIGATION ====================
-let currentPage = 1;
-const totalPages = 15;
 
 function updateProgress() {
     const progress = (currentPage / totalPages) * 100;
@@ -524,453 +483,156 @@ function nextPage() {
     }
 }
 
-// ==================== EXPERIMENT 1 ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.01, high: 16.50, low: 6.90 };
+// Experiment-Factory: Erstellt ein komplettes Experiment
+function createExperiment(config) {
+    const num = config.num;
+    const safeValue = config.safeValue || 7;
+    const probability = config.probability || 0.01;
+    const cost = config.cost || null;
+    const highValue = 16.50;
+    const lowValue = 6.90;
+    
+    let samplesA = 0, samplesB = 0, totalSamples = 0, left = 20;
     let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left1').innerHTML = left; }
+    let decisionPhase = false;
+    
+    function draw() {
+        return Math.random() < probability ? highValue : lowValue;
+    }
+    
+    function updateDrawsLeft() {
+        const elem = document.getElementById(`exp${num}-draws-left`);
+        if (elem) elem.innerHTML = left;
+    }
+    
     function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('7,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
+        if (finished || decisionPhase) return;
+        if (left <= 0) {
+            alert('Keine Samples mehr. Bitte entscheiden Sie.');
+            return;
+        }
+        if (opt === 'A') {
+            samplesA++;
+            showMessage(`${safeValue.toFixed(2)} €`);
+        } else {
+            const result = draw();
+            samplesB++;
+            showMessage(`${result.toFixed(2)} €`);
+        }
+        totalSamples++;
+        left--;
+        updateDrawsLeft();
+        if (left === 0) {
+            alert('Keine Samples mehr. Bitte entscheiden Sie.');
+        }
     }
+    
     function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling1').style.display = 'none';
-        document.getElementById('decision1').style.display = 'block';
+        if (finished) return;
+        if (totalSamples === 0) {
+            alert('Bitte mindestens ein Sample ziehen.');
+            return;
+        }
+        decisionPhase = true;
+        const samplingDiv = document.getElementById(`exp${num}-sampling`);
+        const decisionDiv = document.getElementById(`exp${num}-decision`);
+        if (samplingDiv) samplingDiv.style.display = 'none';
+        if (decisionDiv) decisionDiv.style.display = 'block';
     }
+    
     function submitChoice() {
-        let choice = document.querySelector('input[name="choice1"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
+        if (finished) return;
+        const selected = document.querySelector(`input[name="exp${num}-choice"]:checked`);
+        if (!selected) {
+            alert('Bitte wählen Sie A oder B.');
+            return;
+        }
         finished = true;
-        allResults.push({ experiment: 1, type: 'safe_value', safe_value: 7, probability: 0.01, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
+        const result = {
+            experiment: num,
+            safe_value: safeValue,
+            probability: probability,
+            samples_A: samplesA,
+            samples_B: samplesB,
+            total_samples: totalSamples,
+            final_choice: selected.value
+        };
+        if (cost !== null) result.cost = cost;
+        allResults.push(result);
         nextPage();
     }
-    document.getElementById('sample-a1')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b1')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide1')?.addEventListener('click', nextPhase);
-    document.getElementById('submit1')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 2 ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.01, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left2').innerHTML = left; }
-    function sample(opt) {
+    
+    // Event-Listener mit Event-Delegation (funktioniert auch für dynamische Elemente)
+    document.addEventListener('click', function(e) {
         if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('8,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling2').style.display = 'none';
-        document.getElementById('decision2').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice2"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 2, type: 'safe_value', safe_value: 8, probability: 0.01, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a2')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b2')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide2')?.addEventListener('click', nextPhase);
-    document.getElementById('submit2')?.addEventListener('click', submitChoice);
-})();
+        if (e.target.classList && e.target.classList.contains(`exp${num}-sample-a`)) sample('A');
+        if (e.target.classList && e.target.classList.contains(`exp${num}-sample-b`)) sample('B');
+        if (e.target.classList && e.target.classList.contains(`exp${num}-decide`)) nextPhase();
+        if (e.target.classList && e.target.classList.contains(`exp${num}-submit`)) submitChoice();
+    });
+    
+    // Initialisierung
+    updateDrawsLeft();
+}
 
-// ==================== EXPERIMENT 3 ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.01, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left3').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('9,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling3').style.display = 'none';
-        document.getElementById('decision3').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice3"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 3, type: 'safe_value', safe_value: 9, probability: 0.01, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a3')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b3')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide3')?.addEventListener('click', nextPhase);
-    document.getElementById('submit3')?.addEventListener('click', submitChoice);
-})();
+// Alle 12 Sampling-Experimente erstellen
+createExperiment({ num: 1, safeValue: 7, probability: 0.01 });
+createExperiment({ num: 2, safeValue: 8, probability: 0.01 });
+createExperiment({ num: 3, safeValue: 9, probability: 0.01 });
+createExperiment({ num: 4, safeValue: 10, probability: 0.01 });
+createExperiment({ num: 5, safeValue: 7, probability: 0.01, cost: 0.50 });
+createExperiment({ num: 6, safeValue: 7, probability: 0.01, cost: 1.00 });
+createExperiment({ num: 7, safeValue: 7, probability: 0.01, cost: 2.00 });
+createExperiment({ num: 8, safeValue: 7, probability: 0.01, cost: 3.00 });
+createExperiment({ num: 9, safeValue: 7, probability: 0.10 });
+createExperiment({ num: 10, safeValue: 7, probability: 0.20 });
+createExperiment({ num: 11, safeValue: 7, probability: 0.30 });
+createExperiment({ num: 12, safeValue: 7, probability: 0.40 });
 
-// ==================== EXPERIMENT 4 ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.01, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left4').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('10,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling4').style.display = 'none';
-        document.getElementById('decision4').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice4"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 4, type: 'safe_value', safe_value: 10, probability: 0.01, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a4')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b4')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide4')?.addEventListener('click', nextPhase);
-    document.getElementById('submit4')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 5 (Kosten 0.50) ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.01, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left5').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('7,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling5').style.display = 'none';
-        document.getElementById('decision5').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice5"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 5, type: 'cost', cost: 0.50, probability: 0.01, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a5')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b5')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide5')?.addEventListener('click', nextPhase);
-    document.getElementById('submit5')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 6 (Kosten 1.00) ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.01, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left6').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('7,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling6').style.display = 'none';
-        document.getElementById('decision6').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice6"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 6, type: 'cost', cost: 1.00, probability: 0.01, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a6')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b6')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide6')?.addEventListener('click', nextPhase);
-    document.getElementById('submit6')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 7 (Kosten 2.00) ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.01, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left7').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('7,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling7').style.display = 'none';
-        document.getElementById('decision7').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice7"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 7, type: 'cost', cost: 2.00, probability: 0.01, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a7')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b7')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide7')?.addEventListener('click', nextPhase);
-    document.getElementById('submit7')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 8 (Kosten 3.00) ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.01, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left8').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('7,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling8').style.display = 'none';
-        document.getElementById('decision8').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice8"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 8, type: 'cost', cost: 3.00, probability: 0.01, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a8')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b8')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide8')?.addEventListener('click', nextPhase);
-    document.getElementById('submit8')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 9 (p=0.10) ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.10, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left9').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('7,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling9').style.display = 'none';
-        document.getElementById('decision9').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice9"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 9, type: 'probability', probability: 0.10, safe_value: 7, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a9')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b9')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide9')?.addEventListener('click', nextPhase);
-    document.getElementById('submit9')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 10 (p=0.20) ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.20, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left10').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('7,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling10').style.display = 'none';
-        document.getElementById('decision10').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice10"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 10, type: 'probability', probability: 0.20, safe_value: 7, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a10')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b10')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide10')?.addEventListener('click', nextPhase);
-    document.getElementById('submit10')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 11 (p=0.30) ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.30, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left11').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('7,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling11').style.display = 'none';
-        document.getElementById('decision11').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice11"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 11, type: 'probability', probability: 0.30, safe_value: 7, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a11')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b11')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide11')?.addEventListener('click', nextPhase);
-    document.getElementById('submit11')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 12 (p=0.40) ====================
-(function() {
-    let samplesA = 0, samplesB = 0, left = 20, totalSamples = 0;
-    let task = { prob: 0.40, high: 16.50, low: 6.90 };
-    let finished = false;
-    function draw() { return Math.random() < task.prob ? task.high : task.low; }
-    function update() { document.getElementById('draws-left12').innerHTML = left; }
-    function sample(opt) {
-        if (finished) return;
-        if (left <= 0) { alert('Keine Samples mehr. Bitte entscheiden Sie.'); return; }
-        if (opt === 'A') { samplesA++; showMessage('7,00 €'); }
-        else { let result = draw(); samplesB++; showMessage(result.toFixed(2) + ' €'); }
-        totalSamples++; left--; update();
-        if (left === 0) alert('Keine Samples mehr. Bitte entscheiden Sie.');
-    }
-    function nextPhase() {
-        if (totalSamples === 0) { alert('Bitte mindestens ein Sample ziehen.'); return; }
-        document.getElementById('sampling12').style.display = 'none';
-        document.getElementById('decision12').style.display = 'block';
-    }
-    function submitChoice() {
-        let choice = document.querySelector('input[name="choice12"]:checked');
-        if (!choice) { alert('Bitte wählen Sie A oder B.'); return; }
-        finished = true;
-        allResults.push({ experiment: 12, type: 'probability', probability: 0.40, safe_value: 7, samples_A: samplesA, samples_B: samplesB, total_samples: totalSamples, final_choice: choice.value });
-        nextPage();
-    }
-    document.getElementById('sample-a12')?.addEventListener('click', () => sample('A'));
-    document.getElementById('sample-b12')?.addEventListener('click', () => sample('B'));
-    document.getElementById('decide12')?.addEventListener('click', nextPhase);
-    document.getElementById('submit12')?.addEventListener('click', submitChoice);
-})();
-
-// ==================== EXPERIMENT 13 (Zeitpräferenz 1 Monat) ====================
+// Experiment 13: Zeitpräferenz 1 Monat
 document.getElementById('submit13')?.addEventListener('click', () => {
-    let delayResults = [];
+    const choices = [];
     for (let i = 1; i <= 10; i++) {
-        let selected = document.querySelector(`input[name="delay1_${i}"]:checked`);
-        if (selected) delayResults.push({ row: i, choice: selected.value });
+        const selected = document.querySelector(`input[name="delay1_${i}"]:checked`);
+        choices.push(selected ? selected.value : null);
     }
-    allResults.push({ experiment: 13, type: 'time_preference', delay: '1_month', choices: delayResults });
+    allResults.push({ experiment: 13, type: 'time_preference', delay: '1_month_vs_today', choices: choices });
     nextPage();
 });
 
-// ==================== EXPERIMENT 14 (Zeitpräferenz 2 Monate) ====================
+// Experiment 14: Zeitpräferenz 2 Monate
 document.getElementById('submit14')?.addEventListener('click', () => {
-    let delayResults = [];
+    const choices = [];
     for (let i = 1; i <= 10; i++) {
-        let selected = document.querySelector(`input[name="delay2_${i}"]:checked`);
-        if (selected) delayResults.push({ row: i, choice: selected.value });
+        const selected = document.querySelector(`input[name="delay2_${i}"]:checked`);
+        choices.push(selected ? selected.value : null);
     }
-    allResults.push({ experiment: 14, type: 'time_preference', delay: '2_months', choices: delayResults });
+    allResults.push({ experiment: 14, type: 'time_preference', delay: '2_months_vs_1_month', choices: choices });
     nextPage();
 });
 
-// ==================== DATEN-DOWNLOAD ====================
+// Daten-Download
 document.getElementById('download-data')?.addEventListener('click', () => {
-    if (allResults.length === 0) {
-        alert('Keine Daten zum Herunterladen vorhanden.');
-        return;
-    }
-    const headers = ['experiment', 'type', 'safe_value', 'cost', 'probability', 'samples_A', 'samples_B', 'total_samples', 'final_choice', 'delay', 'choices'];
+    const headers = ['experiment', 'type', 'delay', 'safe_value', 'cost', 'probability', 'samples_A', 'samples_B', 'total_samples', 'final_choice', 'choices'];
     const csvRows = [headers.join(',')];
     for (const row of allResults) {
         const values = headers.map(header => {
             let val = row[header];
             if (val === undefined) val = '';
             if (typeof val === 'object') val = JSON.stringify(val);
-            return JSON.stringify(val);
+            return `"${String(val).replace(/"/g, '""')}"`;
         });
         csvRows.push(values.join(','));
     }
     const blob = new Blob(["\uFEFF" + csvRows.join('\n')], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
-    const url = URL.createObjectURL(blob);
-    link.href = url;
-    link.setAttribute('download', `experiment_results_${Date.now()}.csv`);
-    document.body.appendChild(link);
+    link.href = URL.createObjectURL(blob);
+    link.download = `experiment_results_${Date.now()}.csv`;
     link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    URL.revokeObjectURL(link.href);
 });
 
-// ==================== INIT ====================
+// Start
 showPage(1);
 </script>
 </body>
