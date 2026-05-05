@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entscheidungsexperiment - Gesamtstudie</title>
+    <title>Entscheidungsexperiment - 19 Aufgaben</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
@@ -22,9 +20,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .page.active {
-            display: block;
-        }
+        .page.active { display: block; }
         .progress-bar {
             background: #e0e0e0;
             border-radius: 10px;
@@ -48,12 +44,8 @@
             border-radius: 5px;
             font-size: 16px;
         }
-        button:hover {
-            background: #45a049;
-        }
-        .hidden {
-            display: none;
-        }
+        button:hover { background: #45a049; }
+        .hidden { display: none; }
         .message {
             position: fixed;
             top: 50%;
@@ -97,13 +89,8 @@
             padding: 10px;
             text-align: center;
         }
-        .delay-table th {
-            background-color: #f0f0f0;
-            font-weight: bold;
-        }
-        input[type="radio"] {
-            margin-right: 6px;
-        }
+        .delay-table th { background-color: #f0f0f0; }
+        input[type="radio"] { margin-right: 6px; }
         .trial-counter {
             text-align: center;
             margin-bottom: 20px;
@@ -117,14 +104,12 @@
 </head>
 <body>
 
-<div class="progress-bar">
-    <div class="progress-fill" id="progress-fill"></div>
-</div>
-<div class="trial-counter" id="trial-counter">Teil 1 von 14</div>
+<div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+<div class="trial-counter" id="trial-counter">Teil 1 von 19</div>
 
-<!-- Alle 14 Experiment-Seiten (ohne Wahrscheinlichkeitsangaben!) -->
+<!-- ==================== AUFGABE 1: 7€ sicher ==================== -->
 <div class="page" id="page1">
-    <h3>Teil 1/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 1/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp1-sampling">
         <p>Verbleibende Ziehungen: <span id="exp1-draws-left">20</span></p>
         <div class="experiment-buttons">
@@ -139,14 +124,13 @@
             <label><input type="radio" name="exp1-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp1-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp1-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp1-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 2: 8€ sicher ==================== -->
 <div class="page" id="page2">
-    <h3>Teil 2/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 2/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp2-sampling">
         <p>Verbleibende Ziehungen: <span id="exp2-draws-left">20</span></p>
         <div class="experiment-buttons">
@@ -161,14 +145,13 @@
             <label><input type="radio" name="exp2-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp2-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp2-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp2-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 3: 9€ sicher ==================== -->
 <div class="page" id="page3">
-    <h3>Teil 3/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 3/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp3-sampling">
         <p>Verbleibende Ziehungen: <span id="exp3-draws-left">20</span></p>
         <div class="experiment-buttons">
@@ -183,14 +166,13 @@
             <label><input type="radio" name="exp3-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp3-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp3-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp3-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 4: 10€ sicher ==================== -->
 <div class="page" id="page4">
-    <h3>Teil 4/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 4/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp4-sampling">
         <p>Verbleibende Ziehungen: <span id="exp4-draws-left">20</span></p>
         <div class="experiment-buttons">
@@ -205,14 +187,13 @@
             <label><input type="radio" name="exp4-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp4-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp4-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp4-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 5: Kosten 0,50€ ==================== -->
 <div class="page" id="page5">
-    <h3>Teil 5/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 5/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp5-sampling">
         <div class="cost-notice">Hinweis: Für jede Wahl von Option B entstehen Kosten von 0,50 Euro.</div>
         <p>Verbleibende Ziehungen: <span id="exp5-draws-left">20</span></p>
@@ -229,14 +210,13 @@
             <label><input type="radio" name="exp5-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp5-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp5-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp5-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 6: Kosten 1,00€ ==================== -->
 <div class="page" id="page6">
-    <h3>Teil 6/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 6/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp6-sampling">
         <div class="cost-notice">Hinweis: Für jede Wahl von Option B entstehen Kosten von 1,00 Euro.</div>
         <p>Verbleibende Ziehungen: <span id="exp6-draws-left">20</span></p>
@@ -253,14 +233,13 @@
             <label><input type="radio" name="exp6-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp6-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp6-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp6-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 7: Kosten 2,00€ ==================== -->
 <div class="page" id="page7">
-    <h3>Teil 7/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 7/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp7-sampling">
         <div class="cost-notice">Hinweis: Für jede Wahl von Option B entstehen Kosten von 2,00 Euro.</div>
         <p>Verbleibende Ziehungen: <span id="exp7-draws-left">20</span></p>
@@ -277,14 +256,13 @@
             <label><input type="radio" name="exp7-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp7-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp7-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp7-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 8: Kosten 3,00€ ==================== -->
 <div class="page" id="page8">
-    <h3>Teil 8/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 8/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp8-sampling">
         <div class="cost-notice">Hinweis: Für jede Wahl von Option B entstehen Kosten von 3,00 Euro.</div>
         <p>Verbleibende Ziehungen: <span id="exp8-draws-left">20</span></p>
@@ -301,14 +279,13 @@
             <label><input type="radio" name="exp8-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp8-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp8-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp8-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 9: 10% Chance ==================== -->
 <div class="page" id="page9">
-    <h3>Teil 9/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 9/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp9-sampling">
         <p>Verbleibende Ziehungen: <span id="exp9-draws-left">20</span></p>
         <div class="experiment-buttons">
@@ -323,14 +300,13 @@
             <label><input type="radio" name="exp9-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp9-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp9-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp9-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 10: 20% Chance ==================== -->
 <div class="page" id="page10">
-    <h3>Teil 10/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 10/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp10-sampling">
         <p>Verbleibende Ziehungen: <span id="exp10-draws-left">20</span></p>
         <div class="experiment-buttons">
@@ -345,14 +321,13 @@
             <label><input type="radio" name="exp10-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp10-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp10-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp10-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 11: 30% Chance ==================== -->
 <div class="page" id="page11">
-    <h3>Teil 11/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 11/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp11-sampling">
         <p>Verbleibende Ziehungen: <span id="exp11-draws-left">20</span></p>
         <div class="experiment-buttons">
@@ -367,14 +342,13 @@
             <label><input type="radio" name="exp11-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp11-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp11-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp11-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 12: 40% Chance ==================== -->
 <div class="page" id="page12">
-    <h3>Teil 12/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 12/19: Bitte wählen Sie zwischen A und B.</h3>
     <div id="exp12-sampling">
         <p>Verbleibende Ziehungen: <span id="exp12-draws-left">20</span></p>
         <div class="experiment-buttons">
@@ -389,56 +363,164 @@
             <label><input type="radio" name="exp12-choice" value="A"> Option A</label>
             <label style="margin-left: 20px;"><input type="radio" name="exp12-choice" value="B"> Option B</label>
         </div>
-        <div class="experiment-buttons">
-            <button class="exp12-submit">Bestätigen</button>
-        </div>
+        <div class="experiment-buttons"><button class="exp12-submit">Bestätigen</button></div>
     </div>
 </div>
 
+<!-- ==================== AUFGABE 13: Mixed 0.01 vs 0.10 ==================== -->
 <div class="page" id="page13">
-    <h3>Teil 13/14: Bitte wählen Sie zwischen A und B.</h3>
+    <h3>Teil 13/19: Bitte wählen Sie zwischen A und B.</h3>
+    <div id="exp13-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp13-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp13-sample-a">Sample A</button>
+            <button class="exp13-sample-b">Sample B</button>
+            <button class="exp13-decide">Entscheiden</button>
+        </div>
+    </div>
+    <div id="exp13-decision" class="hidden">
+        <p>Ihre Wahl:</p>
+        <div>
+            <label><input type="radio" name="exp13-choice" value="A"> Option A</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp13-choice" value="B"> Option B</label>
+        </div>
+        <div class="experiment-buttons"><button class="exp13-submit">Bestätigen</button></div>
+    </div>
+</div>
+
+<!-- ==================== AUFGABE 14: Mixed 0.01 vs 0.20 ==================== -->
+<div class="page" id="page14">
+    <h3>Teil 14/19: Bitte wählen Sie zwischen A und B.</h3>
+    <div id="exp14-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp14-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp14-sample-a">Sample A</button>
+            <button class="exp14-sample-b">Sample B</button>
+            <button class="exp14-decide">Entscheiden</button>
+        </div>
+    </div>
+    <div id="exp14-decision" class="hidden">
+        <p>Ihre Wahl:</p>
+        <div>
+            <label><input type="radio" name="exp14-choice" value="A"> Option A</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp14-choice" value="B"> Option B</label>
+        </div>
+        <div class="experiment-buttons"><button class="exp14-submit">Bestätigen</button></div>
+    </div>
+</div>
+
+<!-- ==================== AUFGABE 15: Mixed 0.01 vs 0.30 ==================== -->
+<div class="page" id="page15">
+    <h3>Teil 15/19: Bitte wählen Sie zwischen A und B.</h3>
+    <div id="exp15-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp15-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp15-sample-a">Sample A</button>
+            <button class="exp15-sample-b">Sample B</button>
+            <button class="exp15-decide">Entscheiden</button>
+        </div>
+    </div>
+    <div id="exp15-decision" class="hidden">
+        <p>Ihre Wahl:</p>
+        <div>
+            <label><input type="radio" name="exp15-choice" value="A"> Option A</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp15-choice" value="B"> Option B</label>
+        </div>
+        <div class="experiment-buttons"><button class="exp15-submit">Bestätigen</button></div>
+    </div>
+</div>
+
+<!-- ==================== AUFGABE 16: Mixed 0.01 vs 0.40 ==================== -->
+<div class="page" id="page16">
+    <h3>Teil 16/19: Bitte wählen Sie zwischen A und B.</h3>
+    <div id="exp16-sampling">
+        <p>Verbleibende Ziehungen: <span id="exp16-draws-left">20</span></p>
+        <div class="experiment-buttons">
+            <button class="exp16-sample-a">Sample A</button>
+            <button class="exp16-sample-b">Sample B</button>
+            <button class="exp16-decide">Entscheiden</button>
+        </div>
+    </div>
+    <div id="exp16-decision" class="hidden">
+        <p>Ihre Wahl:</p>
+        <div>
+            <label><input type="radio" name="exp16-choice" value="A"> Option A</label>
+            <label style="margin-left: 20px;"><input type="radio" name="exp16-choice" value="B"> Option B</label>
+        </div>
+        <div class="experiment-buttons"><button class="exp16-submit">Bestätigen</button></div>
+    </div>
+</div>
+
+<!-- ==================== AUFGABE 17: Zeitpräferenz 1 Monat vs heute ==================== -->
+<div class="page" id="page17">
+    <h3>Teil 17/19: Bitte wählen Sie zwischen A und B.</h3>
     <div style="max-width: 550px; margin: 0 auto;">
         <table class="delay-table">
             <thead><tr><th>Option A<br>Auszahlung heute</th><th></th><th>Option B<br>Auszahlung in 1 Monat</th></tr></thead>
             <tbody>
-                <tr><td><input type="radio" name="delay1_1" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_1" value="B10.50"> 10,50 €</td></tr>
-                <tr><td><input type="radio" name="delay1_2" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_2" value="B11.00"> 11,00 €</td></tr>
-                <tr><td><input type="radio" name="delay1_3" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_3" value="B11.50"> 11,50 €</td></tr>
-                <tr><td><input type="radio" name="delay1_4" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_4" value="B12.00"> 12,00 €</td></tr>
-                <tr><td><input type="radio" name="delay1_5" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_5" value="B12.50"> 12,50 €</td></tr>
-                <tr><td><input type="radio" name="delay1_6" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_6" value="B13.00"> 13,00 €</td></tr>
-                <tr><td><input type="radio" name="delay1_7" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_7" value="B13.50"> 13,50 €</td></tr>
-                <tr><td><input type="radio" name="delay1_8" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_8" value="B14.00"> 14,00 €</td></tr>
-                <tr><td><input type="radio" name="delay1_9" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_9" value="B14.50"> 14,50 €</td></tr>
-                <tr><td><input type="radio" name="delay1_10" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_10" value="B15.00"> 15,00 €</td></tr>
+                <tr><td><input type="radio" name="delay1_1" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_1" value="B"> 10,50 €</td></tr>
+                <tr><td><input type="radio" name="delay1_2" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_2" value="B"> 11,00 €</td></tr>
+                <tr><td><input type="radio" name="delay1_3" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_3" value="B"> 11,50 €</td></tr>
+                <tr><td><input type="radio" name="delay1_4" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_4" value="B"> 12,00 €</td></tr>
+                <tr><td><input type="radio" name="delay1_5" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_5" value="B"> 12,50 €</td></tr>
+                <tr><td><input type="radio" name="delay1_6" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_6" value="B"> 13,00 €</td></tr>
+                <tr><td><input type="radio" name="delay1_7" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_7" value="B"> 13,50 €</td></tr>
+                <tr><td><input type="radio" name="delay1_8" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_8" value="B"> 14,00 €</td></tr>
+                <tr><td><input type="radio" name="delay1_9" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_9" value="B"> 14,50 €</td></tr>
+                <tr><td><input type="radio" name="delay1_10" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay1_10" value="B"> 15,00 €</td></tr>
             </tbody>
         </table>
-        <div class="experiment-buttons"><button id="submit13">Weiter</button></div>
+        <div class="experiment-buttons"><button id="submit17">Weiter</button></div>
     </div>
 </div>
 
-<div class="page" id="page14">
-    <h3>Teil 14/14: Bitte wählen Sie zwischen A und B.</h3>
+<!-- ==================== AUFGABE 18: 2 Monate vs heute ==================== -->
+<div class="page" id="page18">
+    <h3>Teil 18/19: Bitte wählen Sie zwischen A und B.</h3>
+    <div style="max-width: 550px; margin: 0 auto;">
+        <table class="delay-table">
+            <thead><tr><th>Option A<br>Auszahlung heute</th><th></th><th>Option B<br>Auszahlung in 2 Monaten</th></tr></thead>
+            <tbody>
+                <tr><td><input type="radio" name="delay2_1" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_1" value="B"> 10,50 €</td></tr>
+                <tr><td><input type="radio" name="delay2_2" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_2" value="B"> 11,00 €</td></tr>
+                <tr><td><input type="radio" name="delay2_3" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_3" value="B"> 11,50 €</td></tr>
+                <tr><td><input type="radio" name="delay2_4" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_4" value="B"> 12,00 €</td></tr>
+                <tr><td><input type="radio" name="delay2_5" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_5" value="B"> 12,50 €</td></tr>
+                <tr><td><input type="radio" name="delay2_6" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_6" value="B"> 13,00 €</td></tr>
+                <tr><td><input type="radio" name="delay2_7" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_7" value="B"> 13,50 €</td></tr>
+                <tr><td><input type="radio" name="delay2_8" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_8" value="B"> 14,00 €</td></tr>
+                <tr><td><input type="radio" name="delay2_9" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_9" value="B"> 14,50 €</td></tr>
+                <tr><td><input type="radio" name="delay2_10" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_10" value="B"> 15,00 €</td></tr>
+            </tbody>
+        </table>
+        <div class="experiment-buttons"><button id="submit18">Weiter</button></div>
+    </div>
+</div>
+
+<!-- ==================== AUFGABE 19: 2 Monate vs 1 Monat ==================== -->
+<div class="page" id="page19">
+    <h3>Teil 19/19: Bitte wählen Sie zwischen A und B.</h3>
     <div style="max-width: 550px; margin: 0 auto;">
         <table class="delay-table">
             <thead><tr><th>Option A<br>Auszahlung in 1 Monat</th><th></th><th>Option B<br>Auszahlung in 2 Monaten</th></tr></thead>
             <tbody>
-                <tr><td><input type="radio" name="delay2_1" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_1" value="B10.50"> 10,50 €</td></tr>
-                <tr><td><input type="radio" name="delay2_2" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_2" value="B11.00"> 11,00 €</td></tr>
-                <tr><td><input type="radio" name="delay2_3" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_3" value="B11.50"> 11,50 €</td></tr>
-                <tr><td><input type="radio" name="delay2_4" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_4" value="B12.00"> 12,00 €</td></tr>
-                <tr><td><input type="radio" name="delay2_5" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_5" value="B12.50"> 12,50 €</td></tr>
-                <tr><td><input type="radio" name="delay2_6" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_6" value="B13.00"> 13,00 €</td></tr>
-                <tr><td><input type="radio" name="delay2_7" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_7" value="B13.50"> 13,50 €</td></tr>
-                <tr><td><input type="radio" name="delay2_8" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_8" value="B14.00"> 14,00 €</td></tr>
-                <tr><td><input type="radio" name="delay2_9" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_9" value="B14.50"> 14,50 €</td></tr>
-                <tr><td><input type="radio" name="delay2_10" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay2_10" value="B15.00"> 15,00 €</td></tr>
+                <tr><td><input type="radio" name="delay3_1" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_1" value="B"> 10,50 €</td></tr>
+                <tr><td><input type="radio" name="delay3_2" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_2" value="B"> 11,00 €</td></tr>
+                <tr><td><input type="radio" name="delay3_3" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_3" value="B"> 11,50 €</td></tr>
+                <tr><td><input type="radio" name="delay3_4" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_4" value="B"> 12,00 €</td></tr>
+                <tr><td><input type="radio" name="delay3_5" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_5" value="B"> 12,50 €</td></tr>
+                <tr><td><input type="radio" name="delay3_6" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_6" value="B"> 13,00 €</td></tr>
+                <tr><td><input type="radio" name="delay3_7" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_7" value="B"> 13,50 €</td></tr>
+                <tr><td><input type="radio" name="delay3_8" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_8" value="B"> 14,00 €</td></tr>
+                <tr><td><input type="radio" name="delay3_9" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_9" value="B"> 14,50 €</td></tr>
+                <tr><td><input type="radio" name="delay3_10" value="A"> 10,00 €</td><td>vs.</td><td><input type="radio" name="delay3_10" value="B"> 15,00 €</td></tr>
             </tbody>
         </table>
-        <div class="experiment-buttons"><button id="submit14">Abschließen</button></div>
+        <div class="experiment-buttons"><button id="submit19">Abschließen</button></div>
     </div>
 </div>
 
+<!-- ==================== DANKESSEITE ==================== -->
 <div class="page" id="thankyou">
     <h2>Vielen Dank für Ihre Teilnahme!</h2>
     <button id="download-data" style="font-size: 18px; padding: 12px 24px;">📥 Daten jetzt herunterladen (CSV)</button>
@@ -450,209 +532,4 @@
 <script>
 // Globale Variablen
 let allResults = [];
-let currentPage = 1;
-const totalPages = 15;
-
-function showMessage(text) {
-    const msg = document.getElementById('message');
-    const overlay = document.getElementById('overlay');
-    msg.innerHTML = text;
-    msg.style.display = 'block';
-    overlay.style.display = 'block';
-    setTimeout(() => { msg.style.display = 'none'; overlay.style.display = 'none'; }, 800);
-}
-
-function updateProgress() {
-    const progress = (currentPage / totalPages) * 100;
-    const fill = document.getElementById('progress-fill');
-    if (fill) fill.style.width = progress + '%';
-    const counter = document.getElementById('trial-counter');
-    if (counter) counter.innerHTML = `Teil ${currentPage} von ${totalPages-1}`;
-}
-
-function showPage(pageNum) {
-    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-    const pageToShow = document.getElementById(`page${pageNum}`);
-    if (pageToShow) pageToShow.classList.add('active');
-    updateProgress();
-}
-
-function nextPage() {
-    if (currentPage < totalPages) {
-        currentPage++;
-        showPage(currentPage);
-    }
-}
-
-// Download-Funktion
-function downloadData() {
-    if (allResults.length === 0) {
-        alert('Keine Daten zum Herunterladen vorhanden. Haben Sie alle Aufgaben bearbeitet?');
-        return;
-    }
-    
-    // CSV Header
-    const headers = ['experiment', 'type', 'delay', 'safe_value', 'cost', 'probability', 'samples_A', 'samples_B', 'total_samples', 'final_choice', 'choices'];
-    const csvRows = [headers.join(',')];
-    
-    for (const row of allResults) {
-        const values = headers.map(header => {
-            let val = row[header];
-            if (val === undefined || val === null) val = '';
-            if (typeof val === 'object') val = JSON.stringify(val);
-            // Escape quotes and wrap in quotes
-            const escaped = String(val).replace(/"/g, '""');
-            return `"${escaped}"`;
-        });
-        csvRows.push(values.join(','));
-    }
-    
-    const csvContent = csvRows.join('\n');
-    const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `experiment_results_${new Date().toISOString().slice(0,19).replace(/:/g, '-')}.csv`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-    
-    alert('Daten wurden erfolgreich heruntergeladen!');
-}
-
-// Experiment-Factory
-function createExperiment(config) {
-    const num = config.num;
-    const safeValue = config.safeValue || 7;
-    const probability = config.probability || 0.01;
-    const cost = config.cost || null;
-    const highValue = 16.50;
-    const lowValue = 6.90;
-    
-    let samplesA = 0, samplesB = 0, totalSamples = 0, left = 20;
-    let finished = false;
-    let decisionPhase = false;
-    
-    function draw() {
-        return Math.random() < probability ? highValue : lowValue;
-    }
-    
-    function updateDrawsLeft() {
-        const elem = document.getElementById(`exp${num}-draws-left`);
-        if (elem) elem.innerHTML = left;
-    }
-    
-    function sample(opt) {
-        if (finished || decisionPhase) return;
-        if (left <= 0) {
-            alert('Keine Samples mehr. Bitte entscheiden Sie.');
-            return;
-        }
-        if (opt === 'A') {
-            samplesA++;
-            showMessage(`${safeValue.toFixed(2)} €`);
-        } else {
-            const result = draw();
-            samplesB++;
-            showMessage(`${result.toFixed(2)} €`);
-        }
-        totalSamples++;
-        left--;
-        updateDrawsLeft();
-        if (left === 0) {
-            alert('Keine Samples mehr. Bitte entscheiden Sie.');
-        }
-    }
-    
-    function nextPhase() {
-        if (finished) return;
-        if (totalSamples === 0) {
-            alert('Bitte mindestens ein Sample ziehen.');
-            return;
-        }
-        decisionPhase = true;
-        const samplingDiv = document.getElementById(`exp${num}-sampling`);
-        const decisionDiv = document.getElementById(`exp${num}-decision`);
-        if (samplingDiv) samplingDiv.style.display = 'none';
-        if (decisionDiv) decisionDiv.style.display = 'block';
-    }
-    
-    function submitChoice() {
-        if (finished) return;
-        const selected = document.querySelector(`input[name="exp${num}-choice"]:checked`);
-        if (!selected) {
-            alert('Bitte wählen Sie A oder B.');
-            return;
-        }
-        finished = true;
-        const result = {
-            experiment: num,
-            safe_value: safeValue,
-            probability: probability,
-            samples_A: samplesA,
-            samples_B: samplesB,
-            total_samples: totalSamples,
-            final_choice: selected.value
-        };
-        if (cost !== null) result.cost = cost;
-        allResults.push(result);
-        nextPage();
-    }
-    
-    // Event-Delegation
-    document.addEventListener('click', function(e) {
-        if (finished) return;
-        if (e.target.classList && e.target.classList.contains(`exp${num}-sample-a`)) sample('A');
-        if (e.target.classList && e.target.classList.contains(`exp${num}-sample-b`)) sample('B');
-        if (e.target.classList && e.target.classList.contains(`exp${num}-decide`)) nextPhase();
-        if (e.target.classList && e.target.classList.contains(`exp${num}-submit`)) submitChoice();
-    });
-    
-    updateDrawsLeft();
-}
-
-// Alle 12 Sampling-Experimente erstellen
-createExperiment({ num: 1, safeValue: 7, probability: 0.01 });
-createExperiment({ num: 2, safeValue: 8, probability: 0.01 });
-createExperiment({ num: 3, safeValue: 9, probability: 0.01 });
-createExperiment({ num: 4, safeValue: 10, probability: 0.01 });
-createExperiment({ num: 5, safeValue: 7, probability: 0.01, cost: 0.50 });
-createExperiment({ num: 6, safeValue: 7, probability: 0.01, cost: 1.00 });
-createExperiment({ num: 7, safeValue: 7, probability: 0.01, cost: 2.00 });
-createExperiment({ num: 8, safeValue: 7, probability: 0.01, cost: 3.00 });
-createExperiment({ num: 9, safeValue: 7, probability: 0.10 });
-createExperiment({ num: 10, safeValue: 7, probability: 0.20 });
-createExperiment({ num: 11, safeValue: 7, probability: 0.30 });
-createExperiment({ num: 12, safeValue: 7, probability: 0.40 });
-
-// Experiment 13: Zeitpräferenz 1 Monat
-document.getElementById('submit13')?.addEventListener('click', () => {
-    const choices = [];
-    for (let i = 1; i <= 10; i++) {
-        const selected = document.querySelector(`input[name="delay1_${i}"]:checked`);
-        choices.push(selected ? selected.value : null);
-    }
-    allResults.push({ experiment: 13, type: 'time_preference', delay: '1_month_vs_today', choices: choices });
-    nextPage();
-});
-
-// Experiment 14: Zeitpräferenz 2 Monate
-document.getElementById('submit14')?.addEventListener('click', () => {
-    const choices = [];
-    for (let i = 1; i <= 10; i++) {
-        const selected = document.querySelector(`input[name="delay2_${i}"]:checked`);
-        choices.push(selected ? selected.value : null);
-    }
-    allResults.push({ experiment: 14, type: 'time_preference', delay: '2_months_vs_1_month', choices: choices });
-    nextPage();
-});
-
-// Download-Button
-document.getElementById('download-data')?.addEventListener('click', downloadData);
-
-// Start
-showPage(1);
-</script>
-</body>
-</html>
+let currentPage = 1
